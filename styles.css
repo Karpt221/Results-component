@@ -1,0 +1,192 @@
+
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('HankenGrotesk-VariableFont_wght.ttf') format('ttf');
+  /* Додаткові стилі шрифта (необов'язково) */
+}
+
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+    --light-slate-blue-background: hsl(252, 100%, 67%);
+    --light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --violet-blue-circle: rgb(78, 33, 202);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --Font-size-paragraphs: 18px;
+
+    --Family:[Hanken Grotesk](https://fonts.google.com/specimen/Hanken+Grotesk);
+
+    --Weight-1:500;
+    --Weight-2:700;
+    --Weight-3:800;
+
+    --radius: 1rem;
+}
+
+.light-red{
+  color: var(--light-red);
+}
+
+.orangey-yellow{
+  color: var(--orangey-yellow);
+}
+
+.green-teal{
+  color: var(--green-teal);
+}
+
+.cobalt-blue{
+  color: var(--cobalt-blue);
+}
+
+/*
+=============== 
+Results
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  line-height: 1.5;
+  background-color: var(--Pale-blue);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
+.results-board{
+    max-width: 375px;
+    margin: auto;
+}
+
+.general-result{
+    background-color: var(--light-slate-blue-background);
+    border-radius: var(--radius);
+    text-align: center;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.general-result p{
+  font-size: 15px;
+  color: var(--Pale-blue);
+}
+
+.result-circle{
+  /* background-color: var(--violet-blue-circle); */
+  background: rgb(85,47,190);
+  background: linear-gradient(180deg, rgba(85,47,190,0.6363795518207283) 6%, rgba(78,33,202,0.3310574229691877) 70%);
+  border-radius:50% ;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.gnrl-score{
+  font-weight: var(--Weight-3);
+  font-size: xx-large;
+}
+.result-word, .gnrl-score{
+  color: var(--White);
+}
+
+.stat{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.score, .stat-img-ctgry{
+  display: flex;
+}
+.score p:last-child{
+  color: hsl(220, 1%, 51%);
+}
+
+.stat-img-ctgry img, .score-value{
+  margin-right: 5px;
+}
+
+.summary h2{
+  padding: 15px 0;
+  color: var(--Dark-gray-blue);
+  font-size: 18px;
+}
+.summary{
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 0 10px;
+}
+
+.category{
+  font-weight: var(--Weight-2);
+}
+
+.results-continue{
+  width: 100%;
+  border-radius: 1rem;
+  height: 40px;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  border: transparent;
+  font-weight: var(--Weight-2);
+  margin: 20px 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.results-continue:hover{
+  background-color: var(--light-slate-blue-background);
+}
+
+@media screen and (min-width: 788px){
+  .results-board{
+    display: flex;
+    max-width: 750px;
+  }
+  .summary{
+    width: 50%;
+    padding: 0 2rem;
+    border-radius: 1rem;
+  }
+}
